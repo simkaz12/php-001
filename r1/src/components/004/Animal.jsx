@@ -1,55 +1,46 @@
-function Animal({type, animalColor}) {
-    /*
-   
-    if (type === "Racoon") {
-        
-        return (
-            <div>
-                <p>Racoon</p>
-            </div>
-        )
-        
-    } else if (type === "Cat") {
-        return (
-            <div>
-                <p>Cat</p>
-            </div>
-        )
-        
-    } else {
-        return (
-            <div>
-                <p>Animal</p>
-            </div>
-        )
-        
-    }
-    */
+function Animal({ type, animalColor }) {
+
+    // if (type === 'racoon') {
+    //     return (
+    //         <div>
+    //             <h1>RACOON</h1>
+    //         </div>
+    //     );
+    // } else if (type === 'cat') {
+    //     return (
+    //         <div>
+    //             <h1>CAT</h1>
+    //         </div>
+    //     );
+    // } else {
+    //     return (
+    //         <div>
+    //             <h1>ANIMAL</h1>
+    //         </div>
+    //     );
+    // }
 
     return (
         <div>
-            <h1 style=
-            {
+            <h1 style={{
+                color: animalColor,
+                fontFamily: 'monospace',
+                letterSpacing: '15px',
+                }}>
                 {
-                    color: animalColor,
-                    fontFamily: 'monospace',
-                    letterSpacing: '0.1em'
-                }
-            }>
-                {
-                type === 'Racoon' 
-                ?
-                'Racoon'
-                :
-                type === 'Cat'
-                ?
-                'Cat'
-                :
-                'Animal'
+                    type === 'racoon'
+                        ?
+                        'RACOON'
+                        :
+                        type === 'cat'
+                            ?
+                            'CAT'
+                            :
+                            'ANIMAL'
                 }
             </h1>
         </div>
-    )
+    );
 }
 
 export default Animal;

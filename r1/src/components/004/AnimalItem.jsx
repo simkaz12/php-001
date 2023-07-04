@@ -1,6 +1,6 @@
 import '../../style.scss';
 import rand from '../../functions/rand.js';
-import randColor from '../../functions/randColor';
+import randColor from '../../functions/randColor.js';
 function AnimalItem({ animal }) {
 
     const handleClick = parameter => {

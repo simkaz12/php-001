@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import rand from "../../functions/rand";
 import randColor from "../../functions/randColor";
 
 function Sq() {
   const [sq, setSq] = useState([]);
   const [dir, setDir] = useState(1);
+  const sortPress = useRef(0);
+
   const addOne = (_) => {
     setSq((s) => [
       ...s,
@@ -14,6 +16,7 @@ function Sq() {
   const sort = (_) => {
     setSq((s) => [...s].sort((a, b) => dir * (a.d - b.d)));
     setDir((d) => d * -1);
+    console.log("send to mi6:", ++sortPress.current);
   };
   const sortDefault = (_) => {
     setSq((s) => [...s].sort((a, b) => a.row - b.row));
@@ -36,7 +39,7 @@ function Sq() {
         {sq.map((s, i) =>
           s.show ? (
             <div
-              kei={i}
+              key={i}
               className="sq small"
               style={{ backgroundColor: s.c + "70", borderColor: s.c }}
             >

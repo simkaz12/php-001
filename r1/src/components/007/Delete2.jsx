@@ -68,7 +68,7 @@ function App() {
         if (selected && funds) {
             const updatedPersons = persons.map((person) => {
                 if (person.id === selected.id) {
-                    return { ...person, sum: person.sum + parseInt(funds) };
+                    return { ...person, money: person.money + parseInt(funds) };
                 }
                 return person;
             });
@@ -82,10 +82,10 @@ function App() {
         if (selected && funds) {
             const updatedPersons = persons.map((person) => {
                 if (person.id === selected.id) {
-                    const updatedMoney = person.sum - parseInt(funds);
+                    const updatedMoney = person.money - parseInt(funds);
                     return {
                         ...person,
-                        sum: updatedMoney >= 0 ? updatedMoney : 0,
+                        money: updatedMoney >= 0 ? updatedMoney : 0,
                     };
                 }
                 return person;
@@ -125,7 +125,7 @@ function App() {
                                 persons.map((person) => (
                                     <tr key={person.id}>
                                         <td>{person.name}</td>
-                                        <td>{person.last}</td>
+                                        <td>{person.lastName}</td>
                                         <td>{person.sum}</td>
                                         <td>
                                             {selected &&
@@ -137,6 +137,7 @@ function App() {
                                                         onChange={(e) =>
                                                             setFunds(e.target.value)
                                                         }
+                                                        placeholder="Enter funds amount"
                                                     />
                                                 </div>
                                             ) : null}

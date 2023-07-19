@@ -22,7 +22,19 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+
+  .container {
+
+    border: 1px solid #61dafb;
+
+    .left {
+      width: 100%;
+    }
+  }
+
 }
+
+
 
 .App-link {
   color: #61dafb;
@@ -32,35 +44,122 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
 .sq-bin {
   display: flex;
-  width: 100%;
+  width: 900px;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 50px 100px;
+  padding: 50px 30px;
+
+  border: 1px solid #61dafb;
+
+  &.left {
+    min-width: 600px;
+  }
+}
+
+
+fieldset {
+
+  margin-top: 30px;
+
+  legend {
+    color: #87cfeba8;
+    font-size: 1.4rem;
+    padding: 0 10px;
+    text-transform: uppercase;
+  }
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
   box-sizing: border-box;
-  .sq {
-    width: 200px;
-    height: 200px;
-    background-color: #80808050;
-    border: 2px solid #808080;
-    margin: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-size: 2rem;
-    color: #fff;
-    border-radius: 10px;
-    &.small {
-      width: 100px;
-      height: 100px;
-      margin: 2px;
-      border-radius: 4px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  outline: none;
+  background-color: skyblue;
+  color: #fff;
+
+  .num {
+    font-size: 1rem;
+
+  }
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  outline: none;
+  background-color: skyblue;
+  color: #fff;
+  min-width: 200px;
+}
+
+label.checkbox {
+  line-height: 40px;
+  cursor: pointer;
+
+  &::before {
+    content: '\2610';
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    line-height: 40px;
+    margin-left: 20px;
+    color: gray
+  }
+
+  &.checked {
+    &::before {
+      content: '\2611';
+      color: orangered;
     }
   }
+}
+
+label.radio {
+  line-height: 40px;
+  cursor: pointer;
+
+  &::before {
+    content: '\25CE';
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    line-height: 40px;
+    margin-left: 20px;
+    color: gray
+  }
+
+  &.checked {
+    &::before {
+      content: '\25C9';
+      color: orangered;
+    }
+  }
+}
+
+.modal.show {
+  display: block;
+  background-color: #17010845;
+}
+
+.card>.virsus {
+  width: 900px;
 }

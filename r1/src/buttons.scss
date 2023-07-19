@@ -4,13 +4,13 @@ $white: #F4FFFD;
 $blue: #202C59;
 $green: #21897E;
 
-button {
+button.nice {
     display: inline-block;
     padding: .75rem 1.25rem;
     border-radius: 10rem;
     color: $white;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 2rem;
     letter-spacing: .15rem;
     transition: all .3s;
     position: relative;
@@ -18,6 +18,8 @@ button {
     z-index: 1;
     border: none;
     cursor: pointer;
+    min-width: 180px;
+    margin: 10px;
 
     &:after {
         content: '';
@@ -63,6 +65,8 @@ button {
     }
 
     &.yellow {
+        color: black;
+
         &:after {
             background-color: $yellow;
         }
@@ -74,6 +78,7 @@ button {
 
     &.white {
         color: black;
+
         &:after {
             background-color: $white;
         }
@@ -106,6 +111,18 @@ button {
     &.small {
         padding: .5rem 1rem;
         font-size: .8rem;
+        min-width: 80px;
+
+        &.no {
+            margin: 0;
+        }
+
+        &.edit {
+            margin: 0;
+            padding: 5px;
+            font-size: 12px;
+            min-width: 20px;
+        }
     }
 
     &.large {

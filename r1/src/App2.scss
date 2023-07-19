@@ -1,0 +1,41 @@
+.deze {
+    padding-left: 10%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(203, 191, 202, 0.649);
+    flex-direction: column;
+}
+
+
+.virsus,
+.apacia {
+    border: 1px dotted rgb(20, 98, 128);
+    padding: 15px;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.virsus input {
+    width: 25%;
+    font-size: 1.5rem;
+    background-color: rgba(150, 222, 251, 0.638);
+}
+
+h1,
+h2 {
+    border-bottom: 2px double grey;
+}
+
+#acc {
+    border-bottom: 1px solid black;
+    margin-bottom: 5px;
+}
+
+.nice .red .small {
+    font-size: 12px;
+}
+
+.modal.show {
+    display: block;
+    background-color: #17010845;
+}
